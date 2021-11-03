@@ -1,0 +1,19 @@
+<div>
+  <h1>
+    Welcome to your Pokemon store
+  </h1>
+  <img
+    src="/assets/pokemon-souvenirs-paradise.jpg">
+  <br>
+  <br>
+  <p>Here are the items you selected that could be purchased:</p>
+    <div
+      *ngFor="let shopping of (message$ | async); let i = index">
+    <span *ngIf="i > 0">
+      <b>
+        {{ shopping | capitalizeFirst }}
+      </b>
+    </span>
+    </div>
+
+</div>
