@@ -9,6 +9,12 @@ Implementation based on Angular 10 (with material) and a piece of @ngrx/store
 
 Validated successfully with node 12 as a version
 
+
+## Setup
+
+Run `npm install` to setup the project. Packages will be downloaded and populate node_modules folder
+
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
