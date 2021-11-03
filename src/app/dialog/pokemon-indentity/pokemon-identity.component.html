@@ -1,0 +1,168 @@
+
+<mat-dialog-content>
+  <mat-card
+    *ngIf="pokemon.details"
+    [style.background]="getColorFromMappingType(pokemon.species.color.name)">
+    <mat-card-title
+      class="name">
+      {{ pokemon.name | titlecase }}
+    </mat-card-title>
+    <mat-card-content
+      class="pokemon-identity-card">
+      <div *ngIf="pokemon.details.types && pokemon.details.types.length">
+        <b>
+          Types:
+        </b>
+        {{ getTypes() | titlecase }}
+      </div>
+      <div *ngIf="pokemon.details.abilities && pokemon.details.abilities.length">
+        <b>
+          Abilities:
+        </b>
+        {{ getAbilities() | titlecase }}
+      </div>
+      <div>
+        <b>
+          Base experience:
+        </b>
+        {{ pokemon.details.base_experience }}
+      </div>
+      <div *ngIf="pokemon.species.base_happiness">
+        <b>
+          Base happiness:
+        </b>
+        {{ pokemon.species.base_happiness }}
+      </div>
+      <div *ngIf="pokemon.species.capture_rate">
+        <b>
+          Capture rate:
+        </b>
+        {{ pokemon.species.capture_rate }}
+      </div>
+      <div *ngIf="pokemon.species.egg_groups!.length">
+        <b>
+          Eggs groups:
+        </b>
+        {{ getEggsGroups() | titlecase }}
+      </div>
+      <div *ngIf="pokemon.species.evolves_from_species">
+        <b>
+          Evolves from species:
+        </b>
+        {{ pokemon.species.evolves_from_species.name }}
+      </div>
+      <div *ngIf="pokemon.species.flavor_text_entries!.length">
+        <b>
+          Flavor text entries:
+        </b>
+        {{ getFlavorTextEntries() | titlecase }}
+      </div>
+      <div *ngIf="pokemon.species.forms_switchable">
+        <b>
+          Forms switchability ?
+        </b>
+        {{ pokemon.species.forms_switchable ? 'yes' : 'no'}}
+      </div>
+      <div *ngIf="pokemon.species.gender_rate">
+        <b>
+          Gender rate:
+        </b>
+        {{ pokemon.species.gender_rate }}
+      </div>
+      <div *ngIf="pokemon.species.generation">
+        <b>
+          Generation:
+        </b>
+        {{ pokemon.species.generation.name }}
+      </div>
+      <div *ngIf="pokemon.species.generation">
+        <b>
+          Growth rate:
+        </b>
+        {{ pokemon.species.growth_rate.name }}
+      </div>
+      <div *ngIf="pokemon.species.habitat">
+        <b>
+          Habitat:
+        </b>
+        {{ pokemon.species.habitat.name }}
+      </div>
+      <div *ngIf="!!pokemon.species.has_gender_differences">
+        <b>
+          Has gender differences:
+        </b>
+        {{ pokemon.species.has_gender_differences }}
+      </div>
+      <div *ngIf="pokemon.species.hatch_counter">
+        <b>
+          Hatch counter:
+        </b>
+        {{ pokemon.species.hatch_counter }}
+      </div>
+      <div *ngIf="pokemon.species.is_baby">
+        <b>
+          Is baby:
+        </b>
+        {{ pokemon.species.is_baby }}
+      </div>
+      <div *ngIf="pokemon.species.is_legendary">
+        <b>
+          Is legendary:
+        </b>
+        {{ pokemon.species.is_legendary }}
+      </div>
+      <div *ngIf="pokemon.species.is_mythical">
+        <b>
+          Is mythical:
+        </b>
+        {{ pokemon.species.is_mythical }}
+      </div>
+      <div *ngIf="pokemon.species.names!.length">
+        <b>
+          Language names:
+        </b>
+        {{ getAllLanguagesNames() }}
+      </div>
+      <div *ngIf="pokemon.species.order">
+        <b>
+          Order:
+        </b>
+        {{ pokemon.species.order }}
+      </div>
+      <div *ngIf="pokemon.species.pokedex_numbers!.length">
+        <b>
+          Pokedex numbers (and names):
+        </b>
+        {{ getPokedexNumbersAndNames() | titlecase }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-dialog-actions>
+    <button
+      mat-raised-button
+      [mat-dialog-close]="false"
+      mat-dialog-close
+      type="button"
+      class="left-margin">
+      Cancel
+    </button>
+    <button
+      mat-raised-button
+      [mat-dialog-close]="true"
+      (click)="apply()"
+      color="primary"
+      type="button"
+      class="left-margin">
+      Add to your store
+    </button>
+  </mat-dialog-actions>
+
+</mat-dialog-content>
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+@import '../../../styles/_variables';
+@import '../../../styles/_buttons';
+
+.pokemon-identity-card {
+  width: 300px
+}
+.name {
+  text-align: center;
+}
+
+mat-dialog-content {
+  overflow: hidden;
+  max-width: 800px;
+}
+
+.left-margin {
+  margin-left: 22px;
+}
+
+mat-dialog-actions {
+  min-height: 78px;
+}
+
