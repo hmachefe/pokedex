@@ -1,5 +1,7 @@
 # Pokedex
 
+![screen-gif](./pokedex.gif)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
 Implementation based on Angular 10 (with material) and a piece of @ngrx/store 
 
