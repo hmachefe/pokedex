@@ -1,6 +1,6 @@
 # Pokedex
 
-![screen-gif](./pokedex.gif)
+![screen-gif](./pokedex-anim.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
 Implementation based on Angular 10 (with material) and a piece of @ngrx/store 
@@ -23,3 +23,4 @@ Run `ng serve` for a dev server. (Or `npm start`). Navigate to `http://localhost
 
 Run `ng test` (Or `npm test`) to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+![alt text](./unit-tests.png)
