@@ -75,7 +75,6 @@ export class PokemonIdentityComponent implements OnInit {
   }
 
   public apply(): void {
-    debugger;
     this.dialogRef.close(this.pokemon);
   }
 
