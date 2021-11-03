@@ -1,0 +1,96 @@
+@import '../../../styles/_variables';
+@import '../../../styles/_buttons';
+
+h1 {
+  text-align: center;
+  color: #044b94
+}
+
+mat-spinner {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.grid-layout {
+  padding: 48px 0;
+  display: grid;
+  max-width: 100%;
+  grid-gap: 60px;
+  margin: 0 auto;
+  width: 95%;
+  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+
+  .pokemon-card {
+    min-width: 200px;
+    max-width: 400px;
+    color: white;
+    background-color: $dark-sky-blue;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+      animation-name: pulse;
+      animation-duration: 0.4s;
+      animation-fill-mode: both;
+
+      .mat-card-image {
+        transform: scale(1.08);
+      }
+    }
+
+    .mat-card-title {
+      font-family: $font-campton;
+      font-size: 22px;
+      display: inline-flex;
+      margin-top: 4px;
+    }
+
+    .background-image {
+      background-color: #1e6e9cbd;
+      border-radius: 8px;
+      height: 184px;
+
+      .mat-card-image {
+        margin-bottom: 0px;
+        width: 180px;
+        margin-top: -2px;
+      }
+    }
+
+    .index {
+      font-size: 22px;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.pagination {
+  text-align: center;
+  ::ng-deep ul > li:not(.active) > a {
+    color: white;
+    background-color: $dark-sky-blue;
+  }
+
+  ::ng-deep ul > li.disabled > span {
+    color: white;
+    background-color: $dark-sky-blue;
+  }
+
+  ::ng-deep ul > li.active > a {
+    color: white;
+    background-color: $dark-sky-blue;
+  }
+}
+
+.horizontal-center {
+  width: 202px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
