@@ -1,0 +1,47 @@
+
+button[mat-raised-button],
+button[mat-raised-button].mat-raised-button:not(.mat-accent):not(.mat-primary):not(.mat-warn):not(:disabled) {
+  border-radius: 24px;
+  box-shadow: none !important;
+  min-width: 132px;
+  line-height: 30px;
+  max-height: 30px;
+  font-family: $font-campton;
+
+  &:not([color="primary"]):not(:disabled) {
+    border: $primary-border;
+  }
+
+  &[color="primary"]:hover:not(:disabled) {
+    background-color: $dark-sky-blue;
+  }
+
+  &:not([color="primary"]):hover:not(:disabled) {
+    color: $dark-blue;
+    border-color: $dark-blue;
+  }
+
+  &[color="primary"]:active:not(:disabled) {
+    background-color: $dark-sky-blue;
+  }
+
+  &:not([color="primary"]):active:not(:disabled) {
+    color: $dark-blue;
+    border-color: $dark-blue;
+    background-color: $dark-sky-blue;
+  }
+}
+
+button[mat-stroked-button],
+button[mat-stroked-button].mat-stroked-button:not(.mat-accent):not(.mat-primary):not(.mat-warn):not(:disabled) {
+  font-family: $font-campton;
+  border-radius: 24px;
+  box-shadow: none !important;
+  min-width: 132px;
+  line-height: 30px;
+  max-height: 30px;
+
+  &.mat-stroked-button {
+    border-color: $dark-blue;
+  }
+}
